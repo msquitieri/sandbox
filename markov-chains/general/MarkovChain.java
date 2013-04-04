@@ -5,17 +5,17 @@ public class MarkovChain {
 	static public void main(String [] args) {
 		MarkovChain mc = new MarkovChain();
 
-		//mc.add("to be or not to be, that is the question.");
+		mc.add("to be or not to be, that is the question");
 		//mc.add("to what not hey question okay");
 
 		try {
-			mc.add(new File("./Hamlet.txt"));
+			//mc.add(new File("./Hamlet.txt"));
 		} catch (Exception e) { System.err.println(e); }
 
-		for (int i=0; i<10; i++)
-			System.out.println(mc.build("Ophelia"));
+		/*for (int i=0; i<10; i++)
+			System.out.println(mc.build("Ophelia"));*/
 
-		//System.out.println(mc);
+		System.out.println(mc);
 	}
         public void add(String str) {
 		chainify(str);
